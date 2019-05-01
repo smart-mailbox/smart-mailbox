@@ -18,12 +18,19 @@ El Buzón Inteligente permite el ingreso y egreso de correspondencia de manera s
 Sensores y Actuadores a utilizar:
 
 1 Sensor de distancia
+
 1 Sensor de temperatura
+
 1 Balanza
+
 2 LED
+
 2 Servo motor
+
 1 Lector de codigo de barras
+
 1 Sensor óptico
+
 
 Aplicaciones:
 
