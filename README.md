@@ -42,7 +42,7 @@ El Lector lee el tracking y envía el dato al Arduino
 Arduino verifica si el código recibido coincide con alguno de los tracking almacenados. 
 Si coincide, envía una señal al Servo Motor de Ingreso para que rote 90° (el ingreso de correspondencia queda habilitado) y enciende el LED Verde.
 Si no coincide, enciende el LED Rojo.
- Se ingresa el Paquete al buzón a través de la Puerta de Ingreso.
+Se ingresa el Paquete al buzón a través de la Puerta de Ingreso.
 El Paquete cae sobre la Balanza.
 La Balanza toma el peso y envía el dato al Arduino.
 El Sensor de Temperatura realiza una lectura y envía el dato al Arduino
@@ -50,6 +50,7 @@ Transcurridos 30 segundos de la habilitación de ingreso, Arduino envía una se�
 Si existe una diferencia de peso en la Balanza y el Servo Motor de Ingreso volvió a su estado inicial, Arduino registra el ingreso del Paquete.
 Arduino guarda el peso junto con el tracking y lo envía junto con la fecha y hora a la APP.
 Si la temperatura es mayor a 30°, Arduino envía una notificación a la APP informando que es un paquete caliente.
+
 
 
 
@@ -62,5 +63,6 @@ Al cerrarse la Puerta de Egreso, el Sensor Óptico cambia su estado.
 Arduino envía una Señal al Servo Motor de Egreso para retornar a su estado inicial ( egreso de correspondencia deshabilitado ).
 Si transcurren más de 30 segundos sin cerrar la puerta, Arduino envía una notificación a la APP informando que la Puerta de Egreso quedó abierta.
 Arduino calcula la cantidad de correspondencia que queda en el Buzón Inteligente y envía la información a la APP. 
+
 
 
