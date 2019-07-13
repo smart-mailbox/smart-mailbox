@@ -3,6 +3,7 @@ package clases;
 public class PaqueteEnBuzon {
     private String descripcion ;
     private String peso;
+    private String fecha;
 
     public PaqueteEnBuzon(String descripcion, String peso) {
         this.descripcion = descripcion;

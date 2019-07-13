@@ -54,8 +54,6 @@ import clases.Buzon;
 import clases.PaqueteEnBuzon;
 import clases.PaqueteEsperado;
 
-import static android.app.PendingIntent.FLAG_NO_CREATE;
-
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, SensorEventListener, View.OnClickListener {
     TextView textView;
     Sensor sensor;
@@ -82,6 +80,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private final static String CHANNEL_ID = "NOTIFICACION";
     private final static int NOTIFICACION_ID = 0;
     private final static String TEMP_IDEAL = "24";
+    private final static  int ACELEROMETROMAX = 7;
+    private final static  int ACELEROMETROMIN = -7;
+    private final static  int SONIDO_ON = 1;
+    private final static  int SONIDO_OFF = 2;
 
 
     @Override
@@ -101,8 +103,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
 
         start();
-        //FloatingActionButton fab = findViewById(R.id.floatingActionButton);
-        //fab.setOnClickListener((View.OnClickListener) this);
         verificarPermisos();
     }
 
@@ -396,13 +396,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             switch (sensorEvent.sensor.getType()) {
                 case Sensor.TYPE_ACCELEROMETER:
                     float x = sensorEvent.values[0];
-                    if (x < -7 && sonido == 0) {
+                    if (x < ACELEROMETROMIN && sonido == 0) {
                         System.out.println("Valor giro " + x);
                         sonido++;
-                    } else if (x > 7 && sonido == 1) {
+                    } else if (x > ACELEROMETROMAX && sonido == SONIDO_ON) {
                         sonido++;
                     }
-                    if (sonido == 2) {
+                    if (sonido == SONIDO_OFF ) {
                         sonido = 0;
                         sound();
                         updateSensor_acelerometro();
