@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Principal</string>
+    <string name="mi_buzon">Mi buzón</string>
+    <string name="temperatura">Temperatura: </string>
+    <string name="bienvenido">Bienvenido/a</string>
+    <string name="humedad">Humedad: </string>
+    <string name="cod_paquete">Codigo paquete </string>
+    <string name="desc_paquete">Descripción</string>
+    <string name="cargar_paquete">Cargar paquete</string>
+    <string name="peso_buzon">Peso total del buzón: </string>
+    <string name="paq_en_buzon">Paquetes en el buzón</string>
+    <string name="btn_paquete_esperado">Paquetes Esperados</string>
+    <string name="btn_buzon">Ver Buzón</string>
+    <string name="btn_paquete_en_buzon">Paquetes en Buzón</string>
+    <string name="cargar_paquete_manualmente">Manualmente</string>
+    <string name="paq_esperado">Paquetes Esperados</string>
+    <string name="estado_puerta_abierta">Puerta Abierta</string>
+    <string name="estado_puerta_cerrada">Puerta Cerrada</string>
+    <string name="estado_puerta">Estado: </string>
+    <string name="cantidad_paquetes">Cantidad de Paquetes: </string>
+    <string name="elige_forma_carga_cod">¿Cómo querés cargar el código?</string>
+    <string name="usa_cam">Escannear paquete</string>
+    <string name="que_paquete_egreso">Escanea con la cámara el código de cada paquete que has sacado del buzón</string>
+    <string name="ingresa_cod_manual">Ingresa el código</string>
+    <string name="tipo_temp">Selecciona el tipo de temperatura esperado</string>
+    <string name="inicio_Activity">Volver al inicio</string>
+    <string-array name="colecciones">
+        <item>PaqueteEsperado</item>
+        <item>PaqueteEnBuzon</item>
+        <item>Buzon</item>
+    </string-array>
+</resources>
